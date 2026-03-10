@@ -1,2 +1,1 @@
-# darkModeSsuCourse
-Dark theme for ssu course
+# Only for Chromium engine
