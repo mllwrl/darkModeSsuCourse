@@ -9,7 +9,7 @@
         "gecko": {
             "id": "ssu-dark-mode@student.sgu.ru",
             "strict_min_version": "109.0",
-            "update_url": "https://github.com/mllwrl/darkModeSsuCourse"
+            "update_url": "https://github.com/mllwrl/darkModeSsuCourse/updates/darkModeSsuCourse.xpi"
         }
     },
     "permissions": [
