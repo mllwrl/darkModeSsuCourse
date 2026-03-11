@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 180px;
+            background: #1e1e1e;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .btn {
+            background: #2196F3;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .btn.off {
+            background: #555;
+        }
+
+        .status {
+            font-size: 12px;
+            margin-bottom: 10px;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="font-weight: bold; margin-bottom: 5px;">SSU Dark Mode</div>
+    <div id="statusText" class="status">Тема активна</div>
+    <button id="toggleBtn" class="btn">Выключить</button>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
