@@ -1,14 +1,15 @@
 {
     "manifest_version": 3,
     "name": "SSU Dark Mode",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Dark theme for course.sgu.ru - by mllwrl",
     "author": "mllwrl",
     "homepage_url": "https://github.com/mllwrl",
     "browser_specific_settings": {
         "gecko": {
             "id": "ssu-dark-mode@student.sgu.ru",
-            "strict_min_version": "109.0"
+            "strict_min_version": "109.0",
+            "update_url": "https://github.com/mllwrl/darkModeSsuCourse"
         }
     },
     "permissions": [
@@ -36,7 +37,8 @@
     "web_accessible_resources": [
         {
             "resources": [
-                "style.css"
+                "dark.css",
+                "dracula.css"
             ],
             "matches": [
                 "https://course.sgu.ru/*"

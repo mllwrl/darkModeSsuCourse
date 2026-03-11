@@ -1,29 +1,38 @@
-function applyTheme(enabled) {
-    let styleLink = document.getElementById('ssu-dark-style');
+function applyTheme(themeName) {
 
-    const shouldBeEnabled = (enabled !== false);
+    let existingStyle = document.getElementById('ssu-custom-theme');
 
-    if (shouldBeEnabled) {
-        if (!styleLink) {
-            styleLink = document.createElement('link');
-            styleLink.id = 'ssu-dark-style';
-            styleLink.rel = 'stylesheet';
-            styleLink.href = chrome.runtime.getURL('style.css');
-            (document.head || document.documentElement).appendChild(styleLink);
+
+    if (!themeName || themeName === 'none') {
+        if (existingStyle) existingStyle.remove();
+        return;
+    }
+
+
+    let cssUrl = chrome.runtime.getURL(themeName + '.css');
+
+    if (existingStyle) {
+        if (existingStyle.href !== cssUrl) {
+            existingStyle.href = cssUrl;
         }
     } else {
-        if (styleLink) {
-            styleLink.remove();
-        }
+
+        let styleLink = document.createElement('link');
+        styleLink.id = 'ssu-custom-theme';
+        styleLink.rel = 'stylesheet';
+        styleLink.href = cssUrl;
+        (document.head || document.documentElement).appendChild(styleLink);
     }
 }
 
-chrome.storage.local.get("enabled", (data) => {
-    applyTheme(data.enabled);
+
+chrome.storage.local.get("theme", (data) => {
+    applyTheme(data.theme || 'dark');
 });
 
+
 chrome.storage.onChanged.addListener((changes, areaName) => {
-    if (areaName === 'local' && changes.enabled) {
-        applyTheme(changes.enabled.newValue);
+    if (areaName === 'local' && changes.theme) {
+        applyTheme(changes.theme.newValue);
     }
 });

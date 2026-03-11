@@ -1,0 +1,12 @@
+{
+    "addons": {
+        "ssu-dark-mode@student.sgu.ru": {
+            "updates": [
+                {
+                    "version": "1.2",
+                    "update_link": "https://github.com/mllwrl/darkModeSsuCourse"
+                }
+            ]
+        }
+    }
+}
