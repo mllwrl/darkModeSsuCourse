@@ -28,7 +28,7 @@ rm -rf "darkModeSsuCourse"
 
 ```
 
-## Установка
+## Установка в браузер
 
 ### 🔴 Яндекс.Браузер
 1. Скачай файл `darkModeSsuCourse.crx` из папки `updates`.
