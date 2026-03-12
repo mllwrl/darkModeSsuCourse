@@ -6,8 +6,31 @@
 ---
 
 ## 🛠 Установка
+#### Windows
+```cmd
 
-### 🔴 Яндекс.Браузер (Самый простой способ)
+git clone https://github.com/mllwrl/darkModeSsuCourse/
+
+move ".\darkModeSsuCourse\updates" ".\"
+
+rd /s /q ".\darkModeSsuCourse"
+
+```
+
+#### Linux
+```bash
+
+git clone https://github.com/mllwrl/darkModeSsuCourse/
+
+mv "darkModeSsuCourse/updates" "./"
+
+rm -rf "darkModeSsuCourse"
+
+```
+
+## Установка
+
+### 🔴 Яндекс.Браузер
 1. Скачай файл `darkModeSsuCourse.crx` из папки `updates`.
 2. Открой страницу дополнений, введя в адресную строку: `browser://extensions/`
 3. Включи **"Режим разработчика"** (справа вверху).
